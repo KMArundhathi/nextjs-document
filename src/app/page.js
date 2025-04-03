@@ -20,10 +20,10 @@ export default function Home() {
             Welcome
           </h2>
           <p className="mt-4 text-gray-600 text-2xl mb-12">
-            This Next.js page is designed using Tailwind CSS. It provides a basic guide on installing Next.js, running the application, creating components, setting up the page router, and installing and using packages. This serves as a simple example of how to create a Next.js app.
+           {" This Next.js page is designed using Tailwind CSS. It provides a basic guide on installing Next.js, running the application, creating components, setting up the page router, and installing and using packages. This serves as a simple example of how to create a Next.js app."}
           </p>
           <p className="mt-4 text-gray-600 text-2xl mb-12">
-            In the tabs below, you'll find examples of how to write code using Tailwind CSS and Material UI. The first tab covers how to install and run a project. If you're developing a Next.js app, you only need to install one of these UI libraries—there's no need to install both. The other tabs demonstrate how to create a component, set up page routing, and include additional examples.
+           {" In the tabs below, you'll find examples of how to write code using Tailwind CSS and Material UI. The first tab covers how to install and run a project. If you're developing a Next.js app, you only need to install one of these UI libraries—there's no need to install both. The other tabs demonstrate how to create a component, set up page routing, and include additional examples."}
           </p>
         </div>
         <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
@@ -49,7 +49,7 @@ export default function Home() {
           {activeTab === "Read Docs" && (
             <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800">
               <p className="text-xl text-[#223354] dark:text-gray-400">
-                Guide to Installing Next.js with Material UI and Tailwind CSS
+                {"Guide to Installing Next.js with Material UI and Tailwind CSS"}
               </p>
               <div className="mt-4">
                 <Alert severity="info">
@@ -154,12 +154,12 @@ export default function Home() {
                 <code className="text-sm font-mono text-gray-700">pnpm add @mui/material @emotion/react @emotion/styled</code>
               </div>
               <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">
-                1. If you're using the app router (with the app/ directory), you should import CssBaseline in the app/layout.js file to apply global styles.
+                1. If you are using the app router (with the app/ directory), you should import CssBaseline in the app/layout.js file to apply global styles.
               </h6>
               <h6 className="text-base font-semibold text-[#223354]  mb-2">
-                2. If you're using the page router (with the pages/ directory), you should import CssBaseline in the pages/_app.js file.
+                2. If you are using the page router (with the pages/ directory), you should import CssBaseline in the pages/_app.js file.
               </h6>
-              <h6 className="text-indigo-900 text-base font-medium">CssBaseline in your project applies Material UI's global styles and ensures consistent styling across all pages and components.</h6>
+              <h6 className="text-indigo-900 text-base font-medium">{"CssBaseline in your project applies Material UI's global styles and ensures consistent styling across all pages and components."}</h6>
               <div className="mt-2">
                 <Image src={baseImg} alt="baseImg" />
               </div>
@@ -206,7 +206,7 @@ export default config;`}
               </div>
               <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Import Tailwind CSS into your project by adding the following lines to styles/globals.css</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
-                <code className="text-sm font-mono text-gray-700">@import "tailwindcss";</code>
+                <code className="text-sm font-mono text-gray-700">{`@import "tailwindcss";`}</code>
               </div>
               <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Start using Tailwind CSS classes in your components</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
@@ -230,7 +230,7 @@ export default config;`}
 
               <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Inside the app/ directory, create a new folder (this becomes the route)</h6>
               <h6 className="text-base font-normal text-[#223354]  mb-2">Inside the folder, create a page.js file.</h6>
-              <h6 className="text-base font-normal text-[#223354]  mb-2">Creating an "about" page.</h6>
+              <h6 className="text-base font-normal text-[#223354]  mb-2">{`Creating an "about" page.`}</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <pre className="text-sm font-mono text-gray-700">
                   {`app/
@@ -271,7 +271,7 @@ export default config;`}
             <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800">
               <Alert severity="info">
                 <span className="text-xl">
-                  In the App Router, components are server components by default; add "use client" at the top if using state, hooks, or event handlers.
+                  {`In the App Router, components are server components by default; add "use client" at the top if using state, hooks, or event handlers.`}
                 </span>
               </Alert>
               <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Inside the src folder create components folder and create a new file, e.g., Card.js</h6>
@@ -314,7 +314,7 @@ export default function Home() {
           {activeTab === "Examples of Mui" && (
             <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800">
               <p className="text-xl text-[#223354] dark:text-gray-400">
-                Material UI is an open-source React component library that implements Google's Material Design.
+                {`Material UI is an open-source React component library that implements Google's Material Design.`}
               </p>
               <ol className="list-decimal list-inside text-gray-600 mt-4 text-xl">
                 <li>Saves time – no need to design components from scratch.</li>
