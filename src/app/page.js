@@ -9,31 +9,31 @@ import { useState } from "react";
 export default function Home() {
   const [activeTab, setActiveTab] = useState("Read Docs");
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex justify-center">
       {/* <CardComponent /> */}
-      <section className="bg-white max-w-7xl shadow p-8 rounded-lg">
+      <section className="bg-white dark:bg-gray-100 max-w-7xl shadow p-8 rounded-lg">
         <div className="w-full text-left">
-          <h2 className="text-3xl font-bold text-[#223354] mb-4 border-b-2 border-b-neutral-100 pb-12">
+          <h2 className="text-3xl font-bold text-[#223354] mb-4 border-b-2 border-b-neutral-100 pb-12 dark:border-b-2 dark:border-b-gray-200">
             Introduction
           </h2>
           <h2 className="text-3xl font-bold text-[#223354] mb-4 mt-12 ">
             Welcome
           </h2>
           <p className="mt-4 text-gray-600 text-2xl mb-12">
-           {" This Next.js page is designed using Tailwind CSS. It provides a basic guide on installing Next.js, running the application, creating components, setting up the page router, and installing and using packages. This serves as a simple example of how to create a Next.js app."}
+            {" This Next.js page is designed using Tailwind CSS. It provides a basic guide on installing Next.js, running the application, creating components, setting up the page router, and installing and using packages. This serves as a simple example of how to create a Next.js app."}
           </p>
           <p className="mt-4 text-gray-600 text-2xl mb-12">
-           {" In the tabs below, you'll find examples of how to write code using Tailwind CSS and Material UI. The first tab covers how to install and run a project. If you're developing a Next.js app, you only need to install one of these UI libraries—there's no need to install both. The other tabs demonstrate how to create a component, set up page routing, and include additional examples."}
+            {" In the tabs below, you'll find examples of how to write code using Tailwind CSS and Material UI. The first tab covers how to install and run a project. If you're developing a Next.js app, you only need to install one of these UI libraries—there's no need to install both. The other tabs demonstrate how to create a component, set up page routing, and include additional examples."}
           </p>
         </div>
         <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
-          <ul className="flex flex-wrap -mb-px text-base font-semibold text-center" role="tablist">
+          <ul className="flex flex-wrap -mb-px text-base font-semibold text-center " role="tablist">
             {["Read Docs", "Install Mui", "Install Tailwindcss", "Creating a Route", "Creating a Component", "Examples of Mui", "Examples of Tailwindcss"].map((tab) => (
               <li key={tab} className="me-2" role="presentation">
                 <button
                   className={`inline-block p-4 border-b-2 rounded-t-lg transition-all ${activeTab === tab
                     ? "text-purple-600 border-purple-600 dark:text-purple-500 dark:border-purple-500"
-                    : "text-[#223354] hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                    : "text-[#223354] hover:text-gray-600 dark:text-gray-500 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
                     }`}
                   onClick={() => setActiveTab(tab)}
                 >
@@ -66,64 +66,64 @@ export default function Home() {
                   </span>
                 </Alert>
               </div>
-              <h6 className="text-base font-semibold text-[#223354] mt-6 underline underline-offset-8">Using npm:</h6>
+              <h6 className="text-base font-semibold text-[#223354] dark:text-gray-400 mt-6 underline underline-offset-8">Using npm:</h6>
               <ol className="list-decimal list-inside text-gray-600 mt-4 mb-4 text-xl">
-                <li className="mb-2">Open a terminal or command prompt.</li>
-                <li className="mb-2">Run the following command to create a new Next.js project:</li>
+                <li className="mb-2 dark:text-gray-400">Open a terminal or command prompt.</li>
+                <li className="mb-2 dark:text-gray-400">Run the following command to create a new Next.js project:</li>
                 <div className="bg-gray-200 p-4 rounded-md mb-4">
                   <code className="text-sm font-mono text-gray-700">npx create-next-app@latest my-next-app</code>
                   <p className="mt-2 text-sm text-gray-600">
                     You can replace <span className="text-blue-600 font-mono">my-next-app</span> with another name </p>
                 </div>
-                <li className="mb-2">During the installation, you will see prompts asking for configurations such as:</li>
-                <ul className="list-disc pl-6 mt-2 space-y-2 text-base font-medium">
+                <li className="mb-2 dark:text-gray-400">During the installation, you will see prompts asking for configurations such as:</li>
+                <ul className="list-disc pl-6 mt-2 space-y-2 text-base font-medium dark:text-gray-400">
                   <li className="mb-2">TypeScript: Choose whether to use TypeScript.</li>
                   <li className="mb-2">ESLint: Choose whether to enable ESLint.</li>
                   <li className="mb-2">Tailwind CSS: Optionally include Tailwind CSS setup.</li>
                   <li className="mb-2">
-                    <code className="text-sm font-mono text-gray-700">**directory**: Decide if you want to use the src directory.</code>
+                    <code className="text-sm font-mono text-gray-700 dark:text-gray-400">**directory**: Decide if you want to use the src directory.</code>
                   </li>
                   <li className="mb-2">App Router (recommended): Choose between the new app router or the pages router.</li>
                   <li className="mb-2">Import alias: Set up import aliases for cleaner imports.</li>
                 </ul>
-                <li className="mb-2">Navigate into the project directory</li>
+                <li className="mb-2 dark:text-gray-400">Navigate into the project directory</li>
                 <div className="bg-gray-200 p-4 rounded-md mb-4">
                   <code className="text-sm font-mono text-gray-700">cd my-next-app</code>
                 </div>
-                <li className="mb-2">Install dependencies</li>
+                <li className="mb-2 dark:text-gray-400">Install dependencies</li>
                 <div className="bg-gray-200 p-4 rounded-md mb-4">
                   <code className="text-sm font-mono text-gray-700">npm install</code>
                 </div>
-                <li className="mb-2">Start the development server</li>
+                <li className="mb-2 dark:text-gray-400">Start the development server</li>
                 <div className="bg-gray-200 p-4 rounded-md">
                   <code className="text-sm font-mono text-gray-700">npm run dev</code>
                 </div>
               </ol>
-              <h6 className="text-base font-semibold text-[#223354] mt-6 underline underline-offset-8">Using pnpm:</h6>
+              <h6 className="text-base font-semibold text-[#223354] mt-6 underline underline-offset-8 dark:text-gray-400">Using pnpm:</h6>
               <ol className="list-decimal list-inside text-gray-600 mt-4 mb-4 text-xl">
-                <li className="mb-2">Ensure pnpm is installed globally</li>
+                <li className="mb-2 dark:text-gray-400">Ensure pnpm is installed globally</li>
                 <div className="bg-gray-200 p-4 rounded-md mb-4">
                   <code className="text-sm font-mono text-gray-700">npm install -g pnpm</code>
                 </div>
-                <li className="mb-2">Create a new Next.js project using pnpm:</li>
+                <li className="mb-2 dark:text-gray-400">Create a new Next.js project using pnpm:</li>
                 <div className="bg-gray-200 p-4 rounded-md mb-4">
                   <code className="text-sm font-mono text-gray-700">pnpx create-next-app@latest my-next-app</code>
                 </div>
-                <li className="mb-2">Navigate into the project directory</li>
+                <li className="mb-2 dark:text-gray-400">Navigate into the project directory</li>
                 <div className="bg-gray-200 p-4 rounded-md mb-4">
                   <code className="text-sm font-mono text-gray-700">cd my-next-app</code>
                 </div>
-                <li className="mb-2">Install dependencies</li>
+                <li className="mb-2 dark:text-gray-400">Install dependencies</li>
                 <div className="bg-gray-200 p-4 rounded-md mb-4">
                   <code className="text-sm font-mono text-gray-700">pnpm install</code>
                 </div>
-                <li className="mb-2">Start the development server</li>
+                <li className="mb-2 dark:text-gray-400">Start the development server</li>
                 <div className="bg-gray-200 p-4 rounded-md">
                   <code className="text-sm font-mono text-gray-700">pnpm run dev</code>
                 </div>
               </ol>
-              <h3 className="text-xl font-extrabold">The project will be available at http://localhost:3000/</h3>
-              <h3 className="text-xl font-medium"> This image displays the Next.js app running using npm.</h3>
+              <h3 className="text-xl font-extrabold dark:text-gray-400 mb-4">The project will be available at http://localhost:3000/</h3>
+              <h3 className="text-xl font-medium dark:text-gray-400"> This image displays the Next.js app running using npm.</h3>
               <div className="mt-2">
                 <Image src={nextImg} alt="nextImg" />
                 <Image src={runImg} alt="runImg" />
@@ -145,21 +145,21 @@ export default function Home() {
                   </a>.
                 </span>
               </Alert>
-              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Using npm:</h6>
+              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Using npm:</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <code className="text-sm font-mono text-gray-700">npm install @mui/material @emotion/react @emotion/styled</code>
               </div>
-              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Using pnpm:</h6>
+              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Using pnpm:</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <code className="text-sm font-mono text-gray-700">pnpm add @mui/material @emotion/react @emotion/styled</code>
               </div>
-              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">
+              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">
                 1. If you are using the app router (with the app/ directory), you should import CssBaseline in the app/layout.js file to apply global styles.
               </h6>
-              <h6 className="text-base font-semibold text-[#223354]  mb-2">
+              <h6 className="text-base font-semibold text-[#223354]  mb-2 dark:text-gray-400">
                 2. If you are using the page router (with the pages/ directory), you should import CssBaseline in the pages/_app.js file.
               </h6>
-              <h6 className="text-indigo-900 text-base font-medium">{"CssBaseline in your project applies Material UI's global styles and ensures consistent styling across all pages and components."}</h6>
+              <h6 className="text-indigo-900 text-base font-medium dark:text-gray-400">{"CssBaseline in your project applies Material UI's global styles and ensures consistent styling across all pages and components."}</h6>
               <div className="mt-2">
                 <Image src={baseImg} alt="baseImg" />
               </div>
@@ -185,15 +185,15 @@ export default function Home() {
                   </a>.
                 </span>
               </Alert>
-              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Using npm:</h6>
+              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Using npm:</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <code className="text-sm font-mono text-gray-700">npm install tailwindcss @tailwindcss/postcss postcss</code>
               </div>
-              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Using pnpm:</h6>
+              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Using pnpm:</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <code className="text-sm font-mono text-gray-700">pnpm add tailwindcss @tailwindcss/postcss postcss</code>
               </div>
-              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Configure Tailwind by editing tailwind.config.js</h6>
+              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Configure Tailwind by editing tailwind.config.js</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <pre className="text-sm font-mono text-gray-700">
                   {`const config = {
@@ -204,11 +204,11 @@ plugins: {
 export default config;`}
                 </pre>
               </div>
-              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Import Tailwind CSS into your project by adding the following lines to styles/globals.css</h6>
+              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Import Tailwind CSS into your project by adding the following lines to styles/globals.css</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <code className="text-sm font-mono text-gray-700">{`@import "tailwindcss";`}</code>
               </div>
-              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Start using Tailwind CSS classes in your components</h6>
+              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Start using Tailwind CSS classes in your components</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <pre className="text-sm font-mono text-gray-700 whitespace-pre-wrap">
                   {`export default function Home() {
@@ -228,9 +228,9 @@ export default config;`}
           {activeTab === "Creating a Route" && (
             <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800">
 
-              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Inside the app/ directory, create a new folder (this becomes the route)</h6>
-              <h6 className="text-base font-normal text-[#223354]  mb-2">Inside the folder, create a page.js file.</h6>
-              <h6 className="text-base font-normal text-[#223354]  mb-2">{`Creating an "about" page.`}</h6>
+              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Inside the app/ directory, create a new folder (this becomes the route)</h6>
+              <h6 className="text-base font-normal text-[#223354]  mb-2 dark:text-gray-400">Inside the folder, create a page.js file.</h6>
+              <h6 className="text-base font-normal text-[#223354]  mb-2 dark:text-gray-400">{`Creating an "about" page.`}</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <pre className="text-sm font-mono text-gray-700">
                   {`app/
@@ -240,7 +240,7 @@ export default config;`}
 `}
                 </pre>
               </div>
-              <h6 className="text-base font-normal text-[#223354]  mb-2">Add Content to the Route Page</h6>
+              <h6 className="text-base font-normal text-[#223354] dark:text-gray-400 mb-2">Add Content to the Route Page</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <pre className="text-sm font-mono text-gray-700">
                   {`import React from 'react'
@@ -267,14 +267,14 @@ export default config;`}
               </div>
             </div>
           )}
-                    {activeTab === "Creating a Component" && (
+          {activeTab === "Creating a Component" && (
             <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800">
               <Alert severity="info">
                 <span className="text-xl">
                   {`In the App Router, components are server components by default; add "use client" at the top if using state, hooks, or event handlers.`}
                 </span>
               </Alert>
-              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Inside the src folder create components folder and create a new file, e.g., Card.js</h6>
+              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Inside the src folder create components folder and create a new file, e.g., Card.js</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <pre className="text-sm font-mono text-gray-700">
                   {`import React from 'react'
@@ -290,7 +290,7 @@ function CardComponent() {
 export default CardComponent`}
                 </pre>
               </div>
-              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Use the component inside a page</h6>
+              <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Use the component inside a page</h6>
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <pre className="text-sm font-mono text-gray-700">
                   {`import CardComponent from "@/component/CardComponent";
@@ -316,7 +316,7 @@ export default function Home() {
               <p className="text-xl text-[#223354] dark:text-gray-400">
                 {`Material UI is an open-source React component library that implements Google's Material Design.`}
               </p>
-              <ol className="list-decimal list-inside text-gray-600 mt-4 text-xl">
+              <ol className="list-decimal list-inside text-gray-600 mt-4 text-xl dark:text-gray-400">
                 <li>Saves time – no need to design components from scratch.</li>
                 <li>Easy to customize – change themes, colors, and styles easily.</li>
                 <li>Responsive – works well on all screen sizes.</li>
@@ -370,7 +370,7 @@ export default function Home() {
               <div className="mt-6 p-4 bg-gray-200 rounded-lg">
                 <h3 className="text-xl font-semibold text-[#223354]">Button</h3>
               </div>
-              <div className="mt-6">
+              <div className="mt-6 ">
                 <Stack spacing={2} direction="row">
                   <Button variant="text">Text</Button>
                   <Button variant="contained">Contained</Button>
@@ -383,7 +383,7 @@ export default function Home() {
               <div className="mt-6 p-4 bg-gray-200 rounded-lg">
                 <h3 className="text-xl font-semibold text-[#223354]">Basic TextField</h3>
               </div>
-              <div className="mt-6">
+              <div className="mt-6 dark:bg-gray-50">
                 <Box
                   component="form"
                   sx={{ '& > :not(style)': { m: 1, width: '25ch' } }}
@@ -394,6 +394,7 @@ export default function Home() {
                   <TextField id="filled-basic" label="Filled" variant="filled" />
                   <TextField id="standard-basic" label="Standard" variant="standard" />
                 </Box>
+                
               </div>
               <div className="mt-8">
                 <Image src={textfieldImg} alt="testfieldImage" />
@@ -405,7 +406,7 @@ export default function Home() {
               <p className="text-lg text-[#223354] dark:text-gray-400">
                 Tailwind CSS is a tool that helps you style your website or app quickly. Instead of writing custom CSS (styles), you use pre-made utility classes to add styles directly to HTML or JSX elements.
               </p>
-              <ol className="list-decimal list-inside text-gray-600 mt-4 text-xl">
+              <ol className="list-decimal list-inside text-gray-600 mt-4 text-xl dark:text-gray-400">
                 <li>Customization – You can create any design you want without needing to change the default styles.</li>
                 <li>Responsive Design – Tailwind has built-in options to make your site look good on all screen sizes (like mobile, tablet, or desktop).</li>
               </ol>
@@ -428,14 +429,14 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-[#223354]">Card</h3>
               </div>
               <div className="mt-6">
-                <div className="flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 shadow-2xl">
+                <div className="flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 shadow-2xl dark:bg-gray-700">
                   <Image src={profileImg} alt="profileImage" className="mx-auto block h-24 w-24 rounded-full sm:mx-0 sm:shrink-0" />
                   <div className="space-y-2 text-center sm:text-left">
                     <div className="space-y-0.5">
-                      <p className="text-lg font-semibold text-black">Erin Lindford</p>
+                      <p className="text-lg font-semibold text-black dark:text-gray-400">Erin Lindford</p>
                       <p className="font-medium text-gray-500">Product Engineer</p>
                     </div>
-                    <button className="border-purple-200 text-purple-600 hover:border-transparent hover:bg-purple-600 hover:text-white active:bg-purple-700 border-2 p-2 rounded-2xl">
+                    <button className="border-purple-200 text-purple-600 hover:border-transparent hover:bg-purple-600 hover:text-white active:bg-purple-700 border-2 p-2 rounded-2xl dark:text-gray-400">
                       Message
                     </button>
                   </div>
