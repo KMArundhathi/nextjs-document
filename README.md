@@ -14,8 +14,8 @@ This is a project built with Next.js and Tailwind CSS. The following document pr
 1. **Clone the repository**  
    First, clone the project to your local machine using the following command:
    ```bash
-   git clone https://github.com/your-repository-name.git
-   cd your-repository-name
+   git clone https://github.com/KMArundhathi/nextjs-document
+   cd nextjs-document
 
 npm install
 npm run dev
