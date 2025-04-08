@@ -17,7 +17,16 @@ This is a project built with Next.js and Tailwind CSS. The following document pr
    git clone https://github.com/KMArundhathi/nextjs-document
    cd nextjs-document
 
-npm install
-npm run dev
+2. **Install Dependencies**
+
+   npm install
+
+3. **Run the Development Server**  
+ 
+   npm run dev
+
+4. **Open in Browser**  
+
+
 
 Once the server starts, open http://localhost:3000 in your browser to view the application.
