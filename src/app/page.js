@@ -9,41 +9,48 @@ import { useState } from "react";
 export default function Home() {
   const [activeTab, setActiveTab] = useState("Read Docs");
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex justify-center">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 lg:flex md:flex justify-center">
       {/* <CardComponent /> */}
       <section className="bg-white dark:bg-gray-100 max-w-7xl shadow p-8 rounded-lg">
         <div className="w-full text-left">
           <h2 className="text-3xl font-bold text-[#223354] mb-4 border-b-2 border-b-neutral-100 pb-12 dark:border-b-2 dark:border-b-gray-200">
             Introduction
           </h2>
-          <h2 className="text-3xl font-bold text-[#223354] mb-4 mt-12 ">
+          <h2 className="lg:text-3xl font-bold text-[#223354] mb-4 mt-12 text-2xl sm:text-xl ">
             Welcome
           </h2>
-          <p className="mt-4 text-gray-600 text-2xl mb-12">
+          <p className="mt-4 text-gray-600 text-xl lg:text-2xl mb-12">
             {" This Next.js page is designed using Tailwind CSS. It provides a basic guide on installing Next.js, running the application, creating components, setting up the page router, and installing and using packages. This serves as a simple example of how to create a Next.js app."}
           </p>
-          <p className="mt-4 text-gray-600 text-2xl mb-12">
+          <p className="mt-4 text-gray-600 text-xl lg:text-2xl mb-12">
             {" In the tabs below, you'll find examples of how to write code using Tailwind CSS and Material UI. The first tab covers how to install and run a project. If you're developing a Next.js app, you only need to install one of these UI libraries—there's no need to install both. The other tabs demonstrate how to create a component, set up page routing, and include additional examples."}
           </p>
         </div>
         <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
-          <ul className="flex flex-wrap -mb-px text-base font-semibold text-center " role="tablist">
-            {["Read Docs", "Install Mui", "Install Tailwindcss", "Creating a Route", "Creating a Component", "Examples of Mui", "Examples of Tailwindcss"].map((tab) => (
-              <li key={tab} className="me-2" role="presentation">
+          <ul className="flex flex-col sm:flex-row flex-wrap text-base font-semibold text-center" role="tablist">
+            {[
+              "Read Docs",
+              "Install Mui",
+              "Install Tailwindcss",
+              "Creating a Route",
+              "Creating a Component",
+              "Examples of Mui",
+              "Examples of Tailwindcss",
+            ].map((tab) => (
+              <li key={tab} className="sm:me-2 mb-2 sm:mb-0" role="presentation">
                 <button
-                  className={`inline-block p-4 border-b-2 rounded-t-lg transition-all ${activeTab === tab
+                  className={`w-full sm:w-auto inline-block p-4 border-b-2 rounded-t-lg transition-all ${activeTab === tab
                     ? "text-purple-600 border-purple-600 dark:text-purple-500 dark:border-purple-500"
                     : "text-[#223354] hover:text-gray-600 dark:text-gray-500 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
                     }`}
                   onClick={() => setActiveTab(tab)}
                 >
-                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                  {tab}
                 </button>
               </li>
             ))}
           </ul>
         </div>
-
         {/* Tabs Content */}
         <div>
           {activeTab === "Read Docs" && (
@@ -231,8 +238,8 @@ export default config;`}
               <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Inside the app/ directory, create a new folder (this becomes the route)</h6>
               <h6 className="text-base font-normal text-[#223354]  mb-2 dark:text-gray-400">Inside the folder, create a page.js file.</h6>
               <h6 className="text-base font-normal text-[#223354]  mb-2 dark:text-gray-400">{`Creating an "about" page.`}</h6>
-              <div className="bg-gray-200 p-4 rounded-md mb-4">
-                <pre className="text-sm font-mono text-gray-700">
+              <div className="bg-gray-200 p-4 rounded-md mb-4 overflow-x-auto">
+                <pre className="text-sm font-mono text-gray-700 whitespace-pre">
                   {`app/
  ├── page.js          
  ├── about/           # "about" route
@@ -241,22 +248,24 @@ export default config;`}
                 </pre>
               </div>
               <h6 className="text-base font-normal text-[#223354] dark:text-gray-400 mb-2">Add Content to the Route Page</h6>
-              <div className="bg-gray-200 p-4 rounded-md mb-4">
-                <pre className="text-sm font-mono text-gray-700">
+              <div className="bg-gray-200 p-4 rounded-md mb-4 overflow-x-auto">
+                <pre className="text-sm font-mono text-gray-700 whitespace-pre">
                   {`import React from 'react'
-                  
-                  function AboutPage() {
-                      return (
-                          <div>
-                              <h1 className='text-center items-center justify-center text-2xl text-amber-700'>About Us</h1>
-                              <p className='text-center items-center justify-center text-2xl text-amber-700'>This is the About page.</p></div>
-                      )
-                  }
-                  
-                  export default AboutPage
+
+function AboutPage() {
+    return (
+        <div>
+            <h1 className='text-center items-center justify-center text-2xl text-amber-700'>About Us</h1>
+            <p className='text-center items-center justify-center text-2xl text-amber-700'>This is the About page.</p>
+        </div>
+    )
+}
+
+export default AboutPage
 `}
                 </pre>
               </div>
+
               <div className="bg-gray-200 p-4 rounded-md mb-4">
                 <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Open http://localhost:3000/about → About Page</h6>
               </div>
@@ -275,8 +284,8 @@ export default config;`}
                 </span>
               </Alert>
               <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Inside the src folder create components folder and create a new file, e.g., Card.js</h6>
-              <div className="bg-gray-200 p-4 rounded-md mb-4">
-                <pre className="text-sm font-mono text-gray-700">
+              <div className="bg-gray-200 p-4 rounded-md mb-4 overflow-x-auto">
+                <pre className="text-sm font-mono text-gray-700 whitespace-pre">
                   {`import React from 'react'
 
 function CardComponent() {
@@ -291,8 +300,8 @@ export default CardComponent`}
                 </pre>
               </div>
               <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2 dark:text-gray-400">Use the component inside a page</h6>
-              <div className="bg-gray-200 p-4 rounded-md mb-4">
-                <pre className="text-sm font-mono text-gray-700">
+              <div className="bg-gray-200 p-4 rounded-md mb-4 overflow-x-auto">
+                <pre className="text-sm font-mono text-gray-700 whitespace-pre">
                   {`import CardComponent from "@/component/CardComponent";
 
 export default function Home() {
@@ -394,7 +403,7 @@ export default function Home() {
                   <TextField id="filled-basic" label="Filled" variant="filled" />
                   <TextField id="standard-basic" label="Standard" variant="standard" />
                 </Box>
-                
+
               </div>
               <div className="mt-8">
                 <Image src={textfieldImg} alt="testfieldImage" />
