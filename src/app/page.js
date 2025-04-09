@@ -26,7 +26,7 @@ export default function Home() {
             {" In the tabs below, you'll find examples of how to write code using Tailwind CSS and Material UI. The first tab covers how to install and run a project. If you're developing a Next.js app, you only need to install one of these UI libraries—there's no need to install both. The other tabs demonstrate how to create a component, set up page routing, and include additional examples."}
           </p>
           <p className="mt-4 text-gray-600 text-xl lg:text-2xl mb-12">
-            Here's a simple Next.js app that you can clone and run:
+            {`Here's a simple Next.js app that you can clone and run:`}
             <a
               href="https://github.com/KMArundhathi/simple-nextjs-app"
               target="_blank"
