@@ -33,7 +33,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="text-blue-600 underline"
             >
-              {' '}https://github.com/KMArundhathi/simple-nextjs-app
+              {' '}simple-nextjs-app
             </a>.
           </p>
 
