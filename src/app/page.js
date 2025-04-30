@@ -96,6 +96,17 @@ export default function Home() {
                   <p className="mt-2 text-sm text-gray-600">
                     You can replace <span className="text-blue-600 font-mono">my-next-app</span> with another name </p>
                 </div>
+                <li className="mb-2 dark:text-gray-400">
+                  If you want to avoid potential instability or vulnerabilities with the latest version, you can manually install a specific stable version:
+                </li>
+                <div className="bg-gray-200 p-4 rounded-md mb-4">
+                  <code className="text-sm font-mono text-gray-700">
+                    npm install next@15.2.4 react@19 react-dom@19
+                  </code>
+                  <p className="mt-2 text-sm text-gray-600">
+                    This installs Next.js version <span className="text-blue-600 font-mono">15.2.4</span> along with React and ReactDOM version <span className="text-blue-600 font-mono">19</span>.
+                  </p>
+                </div>
                 <li className="mb-2 dark:text-gray-400">During the installation, you will see prompts asking for configurations such as:</li>
                 <ul className="list-disc pl-6 mt-2 space-y-2 text-base font-medium dark:text-gray-400">
                   <li className="mb-2">TypeScript: Choose whether to use TypeScript.</li>
@@ -284,7 +295,7 @@ export default AboutPage
                 <h6 className="text-base font-semibold text-[#223354] mt-6 mb-2">Open http://localhost:3000/about → About Page</h6>
               </div>
               <div className="mt-2">
-                <Image src={aboutImage1} alt="aboutImage1" />
+                {/* <Image src={aboutImage1} alt="aboutImage1" /> */}
                 <Image src={aboutImage2} alt="aboutImage2" />
                 <Image src={aboutImage3} alt="aboutImage3" />
               </div>
