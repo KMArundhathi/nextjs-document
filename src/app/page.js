@@ -19,13 +19,13 @@ export default function Home() {
           <h2 className="lg:text-3xl font-bold text-[#223354] mb-4 mt-12 text-2xl sm:text-xl ">
             Welcome
           </h2>
-          <p className="mt-4 text-gray-600 text-xl lg:text-2xl mb-12">
+          <p className="mt-4 text-gray-600 text-xl lg:text-2xl mb-10">
             {" This Next.js page is designed using Tailwind CSS. It provides a basic guide on installing Next.js, running the application, creating components, setting up the page router, and installing and using packages. This serves as a simple example of how to create a Next.js app."}
           </p>
-          <p className="mt-4 text-gray-600 text-xl lg:text-2xl mb-12">
+          <p className="mt-4 text-gray-600 text-xl lg:text-2xl mb-6">
             {" In the tabs below, you'll find examples of how to write code using Tailwind CSS and Material UI. The first tab covers how to install and run a project. If you're developing a Next.js app, you only need to install one of these UI libraries—there's no need to install both. The other tabs demonstrate how to create a component, set up page routing, and include additional examples."}
           </p>
-          <p className="mt-4 text-gray-600 text-xl lg:text-2xl mb-12">
+          <p className="mt-4 text-gray-600 text-xl lg:text-2xl mb-6">
             {`Here's a simple Next.js app that you can clone and run:`}
             <a
               href="https://github.com/KMArundhathi/simple-nextjs-app"
@@ -36,7 +36,9 @@ export default function Home() {
               {' '}simple-nextjs-app
             </a>.
           </p>
-
+          <p className=" text-gray-600 text-xl lg:text-2xl mb-12">
+            This guide uses the latest versions of Next.js and React: <strong>Next.js 15.2.4</strong> and <strong>React 19.0.0</strong>. When you run <code className="bg-gray-100 px-2 py-1 rounded">npx create-next-app@latest</code>, it will install the most recent versions of both frameworks.
+          </p>
         </div>
         <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
           <ul className="flex flex-col sm:flex-row flex-wrap text-base font-semibold text-center" role="tablist">
